@@ -16,6 +16,7 @@ import { ComponentDocsModule } from './containers/component-docs/component-docs.
 import { DocsModule } from './containers/docs/docs.module';
 import { PerformanceModule } from './containers/performance/performance.module';
 import { LandingComponent } from './containers/landing/landing.component';
+import { MapModule } from './containers/map/map.module';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { LandingComponent } from './containers/landing/landing.component';
     ComponentDocsModule,
     DocsModule,
     PerformanceModule,
+    MapModule,
   ],
   declarations: [AppComponent, LandingComponent],
   bootstrap: [AppComponent],

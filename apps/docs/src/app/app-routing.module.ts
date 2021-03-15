@@ -9,6 +9,12 @@ import {
   ProfilesComponent,
 } from './containers/performance/performance.module';
 import {
+  MapComponent,
+  AngularMapComponent,
+  MixedMapComponent,
+  MapProfilesComponent,
+} from './containers/map/map.module';
+import {
   ComponentDocsComponent,
   FabricComponent,
   SemanticUiComponent,
@@ -18,6 +24,16 @@ import { DocsComponent, GettingStartedComponent, WrappersComponent } from './con
 const routes: Routes = [
   { path: 'landing', redirectTo: '' },
   { path: '', component: LandingComponent },
+  {
+    path: 'map',
+    component: MapComponent,
+    children: [
+      { path: '', redirectTo: 'angular', pathMatch: 'full' },
+      { path: 'angular', component: AngularPerfComponent },
+      { path: 'mixed', component: MixedPerfComponent },
+      { path: 'profiles', component: ProfilesComponent },
+    ],
+  },
   {
     path: 'performance',
     component: PerformanceComponent,

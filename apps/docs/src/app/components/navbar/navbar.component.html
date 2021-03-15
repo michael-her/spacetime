@@ -21,6 +21,16 @@
       [active]="rla1.isActive"
       [routerLinkActiveOptions]="{ exact: false }"
     >
+      <div>Map</div>
+    </a>
+    <a
+      mat-tab-link
+      routerLink="performance"
+      routerLinkActive
+      #rla1="routerLinkActive"
+      [active]="rla1.isActive"
+      [routerLinkActiveOptions]="{ exact: false }"
+    >
       <div>Performance</div>
     </a>
     <a
