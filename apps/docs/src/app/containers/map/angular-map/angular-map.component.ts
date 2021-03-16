@@ -4,7 +4,7 @@ import { MatSliderChange } from '@angular/material/slider';
 import { TriangleComponent, DEFAULT_DOT_SIZE } from '../../../components/triangle/triangle.component';
 
 @Component({
-  selector: 'app-angular-perf',
+  selector: 'app-angular-map',
   templateUrl: './angular-map.component.html',
   styleUrls: ['./angular-map.component.scss'],
 })

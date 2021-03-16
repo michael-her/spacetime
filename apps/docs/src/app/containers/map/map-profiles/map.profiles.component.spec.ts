@@ -4,7 +4,7 @@ import { MapProfilesComponent } from './map.profiles.component';
 import { MaterialModule } from '../../../material.module';
 import { ComponentsModule } from '../../../components/components.module';
 
-describe('ProfilesComponent', () => {
+describe('MapProfilesComponent', () => {
   let component: MapProfilesComponent;
   let fixture: ComponentFixture<MapProfilesComponent>;
 

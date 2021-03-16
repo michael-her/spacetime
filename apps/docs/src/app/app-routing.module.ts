@@ -28,20 +28,20 @@ const routes: Routes = [
     path: 'map',
     component: MapComponent,
     children: [
-      { path: '', redirectTo: 'angular', pathMatch: 'full' },
-      { path: 'angular', component: AngularPerfComponent },
-      { path: 'mixed', component: MixedPerfComponent },
-      { path: 'profiles', component: ProfilesComponent },
+      { path: '', redirectTo: 'angular-map', pathMatch: 'full' },
+      { path: 'angular-map', component: AngularMapComponent },
+      { path: 'mixed-map', component: MixedMapComponent },
+      { path: 'map-profiles', component: MapProfilesComponent },
     ],
   },
   {
     path: 'performance',
     component: PerformanceComponent,
     children: [
-      { path: '', redirectTo: 'angular', pathMatch: 'full' },
-      { path: 'angular', component: AngularPerfComponent },
-      { path: 'mixed', component: MixedPerfComponent },
-      { path: 'profiles', component: ProfilesComponent },
+      { path: '', redirectTo: 'angular-perf', pathMatch: 'full' },
+      { path: 'angular-perf', component: AngularPerfComponent },
+      { path: 'mixed-perf', component: MixedPerfComponent },
+      { path: 'perf-profiles', component: ProfilesComponent },
     ],
   },
   {
