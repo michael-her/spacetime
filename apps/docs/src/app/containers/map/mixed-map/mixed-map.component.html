@@ -14,8 +14,8 @@
     <div mat-menu-item>
       <mat-slide-toggle (click)="toggle()">
         <span style="font-size:16px !important">
-          <ng-container *ngIf="!projectAsAngular">As Angular projection</ng-container>
-          <ng-container *ngIf="projectAsAngular">As React attribute</ng-container>
+          <ng-container *ngIf="!projectAsAngular">앵귤라 전사</ng-container>
+          <ng-container *ngIf="projectAsAngular">리액트 렌더링</ng-container>
         </span>
       </mat-slide-toggle>
     </div>
@@ -29,31 +29,33 @@
         (change)="dotSizeChanged($event)"
       >
       </mat-slider>
-      <label>Dot size</label>
+      <label>점 크기</label>
     </div>
   </mat-menu>
 </app-page-header>
 
 <span class="content" [class.collapsed]="contentCollapsed">
-  Every dot is an Angular Component. The counter is
-  {{ projectAsAngular ? 'projected by Angular' : 'rendered by React' }} Within the component is a React Element that is
-  rendered by the Angular-React renderer.<span class="spacer"><br /><br /></span>
+  모든 점은 앵귤라 컴포넌트이다. 컴포넌트 안의 카운터는
+  {{ projectAsAngular ? '앵귤라에서 전사된' : '리액트로 렌더링한' }} 리액트 엘리먼트이며 앵귤라-리액트 렌더러를 통해 렌더링된다.
+  <span class="spacer"><br /><br /></span>
 
-  This performance demonstration visualizes the impact of DOM binging and re-rendering on the single-threaded javascript
-  process. In this case, the animation is interupted by the rendering of the text counter with each tick (second). React
-  and Angular both have advanced binding logic that schedules DOM updates when the thread is not busy (such as when
-  rendering a smooth animation). The toggle between "Angular projection" and "React rendering" of the text counter
-  within each dot (currently set for {{ projectAsAngular ? 'Angular projection' : 'React rendering' }}) demonstrates a
-  limitation of the React elements. Each dot that is rendered by React is discrete. React does not collectively render
-  the dots, and therefore cannot use a global scheduler to ensure that the thread is not blocked and that smooth
-  animation is preserved. When smooth rendering is required, projection of DOM rendering by Angular (through the React
-  element) is more performant.
+  이 성능 시연은 단일쓰레드 자바스크립트 프로세스상에서 DOM 바인딩과 반복 렌더링의 영향도를 가시화해 준다.
+  이 경우, 애니메이션은 틱 (초) 마다 텍스트 카운터를 렌더링함에 따라 멈추게된다. 리액트와 앵귤라는 모두
+  쓰레드가 혼잡하지 않을 때 (렌더링이 자연스럽게 진행되는 타이밍에) DOM을 업데이트하는 고급 바인딩 로직을 가진다.
+  텍스트 카운터에 대해 "앵귤러 전사"와 "리액트 렌더링"을 전환 (현재는 {{ projectAsAngular ? '앵귤라 전사' : '리액트 렌더링' }}로 설정됨) 하여
+  리액트 엘리먼트의 제약을 시연한다. 각 각의 점은 리액트에선 이산적으로 렌더링된다. 리액트는 점들을 취합하여 렌더링하지 않으며,
+  그러므로 쓰레드가 멈추지 않도록 하여 자연스러운 애니메이션을 진행할 수 있는 전역 스케쥴러를 사용할 수 없다.
+  자연스러운 렌더링이 필요한 경우, 앵귤라 렌더링된 DOM을 리액트 엘리먼트에 전사하는 것이 더 나은 성능을 보인다.
 
   <div class="expand" (click)="contentCollapsed = false"></div>
-  <span class="collapse" (click)="contentCollapsed = true">[collapse]</span>
+  <span class="collapse" (click)="contentCollapsed = true">[접기]</span>
 </span>
 
-<app-triangle>
+<app-cesium-map>
+  test
+</app-cesium-map>
+
+<!-- <app-triangle>
   <ng-template let-text="text" let-dot="dot">
     <app-react-dot
       [size]="dot.size"
@@ -71,4 +73,4 @@
   </ng-template>
 
   <div class="message mat-h1">{{ triangle.dots?.length }} Dots</div>
-</app-triangle>
+</app-triangle> -->

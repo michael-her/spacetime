@@ -17,7 +17,7 @@ export class MixedMapComponent {
   contentCollapsed = true;
 
   get toggleTriangleLabel() {
-    return this.triangle.isActive ? 'Stop' : 'Restart';
+    return this.triangle.isActive ? '정지' : '재개';
   }
 
   toggleTriangle() {

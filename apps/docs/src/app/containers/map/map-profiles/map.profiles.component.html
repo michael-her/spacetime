@@ -1,24 +1,24 @@
 <h1>Map Performance Profiles</h1>
 
 <div class="perf-images {{ focus.value }}">
-  <h3>Pure Angular View</h3>
+  <h3>순수 앵귤라 뷰</h3>
 
   <mat-button-toggle-group #focus="matButtonToggleGroup" value="summary">
     <mat-button-toggle (mousedown)="unzoom()" value="summary" checked>
       <mat-icon>pie_chart</mat-icon>
-      <span>Summary</span>
+      <span>개요</span>
     </mat-button-toggle>
     <mat-button-toggle (mousedown)="unzoom()" value="detail">
       <mat-icon>view_array</mat-icon>
-      <span>Detail</span>
+      <span>상세</span>
     </mat-button-toggle>
     <mat-button-toggle (mousedown)="unzoom()" value="detail-zoom">
       <mat-icon>view_carousel</mat-icon>
-      <span>Detail (Zoomed)</span>
+      <span>상세 (확대)</span>
     </mat-button-toggle>
     <mat-button-toggle (mousedown)="unzoom()" value="heap">
       <mat-icon>equalizer</mat-icon>
-      <span>Heap Usage</span>
+      <span>힙 사용량</span>
     </mat-button-toggle>
   </mat-button-toggle-group>
 
@@ -26,12 +26,12 @@
     <img (click)="zoom1 = !zoom1" [class.zoom]="zoom1" src="assets/angular_perf.png" />
   </div>
 
-  <h3>React Rendered Dots (Angular Counter)</h3>
+  <h3>리액트 렌더링 (앵귤라 카운터 전사)</h3>
   <div class="perf-mixed perf-image">
     <img (click)="zoom2 = !zoom2" [class.zoom]="zoom2" src="assets/angular_react_angular_perf.png" />
   </div>
 
-  <h3>React Rendered Dots (React Counter)</h3>
+  <h3>리액트 렌더링 (리액트 카운터 렌더링)</h3>
   <div class="perf-react perf-image">
     <img (click)="zoom3 = !zoom3" [class.zoom]="zoom3" src="assets/angular_react_perf.png" />
   </div>

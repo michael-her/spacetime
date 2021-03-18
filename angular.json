@@ -9,16 +9,30 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
+          "//builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/docs",
             "index": "apps/docs/src/index.html",
             "main": "apps/docs/src/main.ts",
             "tsConfig": "apps/docs/tsconfig.app.json",
             "polyfills": "apps/docs/src/polyfills.ts",
-            "assets": ["apps/docs/src/assets", "apps/docs/src/favicon.ico", "apps/docs/src/404.html"],
-            "styles": ["apps/docs/src/styles.scss"],
-            "scripts": []
+            "assets": [
+              "apps/docs/src/assets", "apps/docs/src/favicon.ico", "apps/docs/src/404.html",
+              {
+                "glob": "**/*",
+                "input": "node_modules/cesium/Build/Cesium",
+                "output": "apps/docs/assets/cesium"
+              }
+            ],
+            "styles": [
+              "node_modules/cesium/Build/Cesium/Widgets/widgets.css",
+              "apps/docs/src/styles.scss"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js"
+            }
           },
           "configurations": {
             "production": {

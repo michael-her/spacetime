@@ -14,7 +14,7 @@ export class AngularPerfComponent {
   @ViewChild(TriangleComponent, { static: true }) readonly triangle: TriangleComponent;
 
   get toggleTriangleLabel() {
-    return this.triangle.isActive ? 'Stop' : 'Restart';
+    return this.triangle.isActive ? '정지' : '재개';
   }
 
   toggleTriangle() {
