@@ -9,26 +9,26 @@ import { TriangleComponent, DEFAULT_DOT_SIZE } from '../../../components/triangl
   styleUrls: ['./mixed-map.component.scss'],
 })
 export class MixedMapComponent {
-  DEFAULT_DOT_SIZE = DEFAULT_DOT_SIZE;
+  // DEFAULT_DOT_SIZE = DEFAULT_DOT_SIZE;
 
-  @ViewChild(TriangleComponent, { static: true }) readonly triangle: TriangleComponent;
+  // @ViewChild(TriangleComponent, { static: true }) readonly triangle: TriangleComponent;
 
-  projectAsAngular = true;
-  contentCollapsed = true;
+  // projectAsAngular = true;
+  // contentCollapsed = true;
 
-  get toggleTriangleLabel() {
-    return this.triangle.isActive ? '정지' : '재개';
-  }
+  // get toggleTriangleLabel() {
+  //   return this.triangle.isActive ? '정지' : '재개';
+  // }
 
-  toggleTriangle() {
-    this.triangle.toggle();
-  }
+  // toggleTriangle() {
+  //   this.triangle.toggle();
+  // }
 
-  toggle() {
-    this.projectAsAngular = !this.projectAsAngular;
-  }
+  // toggle() {
+  //   this.projectAsAngular = !this.projectAsAngular;
+  // }
 
-  dotSizeChanged(ev: MatSliderChange) {
-    this.triangle.start({ dotSize: ev.value, redraw: true });
-  }
+  // dotSizeChanged(ev: MatSliderChange) {
+  //   this.triangle.start({ dotSize: ev.value, redraw: true });
+  // }
 }

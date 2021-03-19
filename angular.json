@@ -9,8 +9,7 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
-          "//builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/docs",
             "index": "apps/docs/src/index.html",
@@ -29,10 +28,7 @@
               "node_modules/cesium/Build/Cesium/Widgets/widgets.css",
               "apps/docs/src/styles.scss"
             ],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "./extra-webpack.config.js"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
